@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LevelingUpRound35">
+    <test name="ChromeTests">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="duckDuckGoUrl" value="https://duckduckgo.com/"/>
+        <classes>
+            <class name="mohabTasks.DuckDuckGoPageTest">
+                <methods>
+                    <include name="shouldAssertGooglePageTitle"/>
+                    <include name="shouldDisplayDuckDuckGoLogo"/>
+                    <include name="shouldShowSeleniumWebDriverDocumentationAsFirstSearchResult"/>
+                    <include name="shouldShowLinkedInAsSecondCucumberIoSearchResult"/>
+                </methods>
+            </class>
+            <class name="mohabTasks.drivers.BrowserFactoryTest"/>
+        </classes>
+    </test>
+    <test name="FirefoxTestNGSearch">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="duckDuckGoUrl" value="https://duckduckgo.com/"/>
+        <classes>
+            <class name="mohabTasks.DuckDuckGoPageTest">
+                <methods>
+                    <include name="shouldShowTestNgTutorialAsFourthSearchResultInFirefox"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
