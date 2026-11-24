@@ -29,7 +29,7 @@ public class CheckboxesPage {
     }
 
     public void checkFirstCheckbox() {
-        WebElement firstCheckbox = getCheckboxes().get(0);
+        WebElement firstCheckbox = getCheckboxes().getFirst();
         if (!firstCheckbox.isSelected()) {
             firstCheckbox.click();
         }
