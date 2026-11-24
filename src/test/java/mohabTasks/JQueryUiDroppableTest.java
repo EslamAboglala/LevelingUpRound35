@@ -15,10 +15,9 @@ public class JQueryUiDroppableTest {
     private JQueryUiDroppablePage droppablePage;
 
     @BeforeMethod
-    @Parameters({"browser", "jQueryUiDroppableUrl"})
-    public void setUp(@Optional("chrome") String browserName,
-                      @Optional("https://jqueryui.com/resources/demos/droppable/default.html") String pageUrl) {
-        driver = BrowserFactory.createDriver(browserName);
+    @Parameters("jQueryUiDroppableUrl")
+    public void setUp(@Optional("https://jqueryui.com/resources/demos/droppable/default.html") String pageUrl) {
+        driver = BrowserFactory.createDriver();
         droppablePage = new JQueryUiDroppablePage(driver, pageUrl);
     }
 

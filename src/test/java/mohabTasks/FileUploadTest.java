@@ -18,10 +18,9 @@ public class FileUploadTest {
     private FileUploadPage fileUploadPage;
 
     @BeforeMethod
-    @Parameters({"browser", "fileUploadUrl"})
-    public void setUp(@Optional("chrome") String browserName,
-                      @Optional("http://the-internet.herokuapp.com/upload") String fileUploadUrl) {
-        driver = BrowserFactory.createDriver(browserName);
+    @Parameters("fileUploadUrl")
+    public void setUp(@Optional("http://the-internet.herokuapp.com/upload") String fileUploadUrl) {
+        driver = BrowserFactory.createDriver();
         fileUploadPage = new FileUploadPage(driver, fileUploadUrl);
     }
 

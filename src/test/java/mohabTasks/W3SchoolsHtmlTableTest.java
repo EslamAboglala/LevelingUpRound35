@@ -15,10 +15,9 @@ public class W3SchoolsHtmlTableTest {
     private W3SchoolsHtmlTablePage w3SchoolsHtmlTablePage;
 
     @BeforeMethod
-    @Parameters({"browser", "w3SchoolsHtmlTableUrl"})
-    public void setUp(@Optional("chrome") String browserName,
-                      @Optional("https://www.w3schools.com/html/html_tables.asp") String pageUrl) {
-        driver = BrowserFactory.createDriver(browserName);
+    @Parameters("w3SchoolsHtmlTableUrl")
+    public void setUp(@Optional("https://www.w3schools.com/html/html_tables.asp") String pageUrl) {
+        driver = BrowserFactory.createDriver();
         w3SchoolsHtmlTablePage = new W3SchoolsHtmlTablePage(driver, pageUrl);
     }
 

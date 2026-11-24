@@ -15,10 +15,9 @@ public class CheckboxesTest {
     private CheckboxesPage checkboxesPage;
 
     @BeforeMethod
-    @Parameters({"browser", "checkboxesUrl"})
-    public void setUp(@Optional("chrome") String browserName,
-                      @Optional("http://the-internet.herokuapp.com/checkboxes") String checkboxesUrl) {
-        driver = BrowserFactory.createDriver(browserName);
+    @Parameters("checkboxesUrl")
+    public void setUp(@Optional("http://the-internet.herokuapp.com/checkboxes") String checkboxesUrl) {
+        driver = BrowserFactory.createDriver();
         checkboxesPage = new CheckboxesPage(driver, checkboxesUrl);
     }
 

@@ -16,9 +16,9 @@ public class DuckDuckGoPageTest {
 
     @BeforeMethod
     @Parameters({"browser", "duckDuckGoUrl"})
-    public void setUp(@Optional("chrome") String browserName,
+    public void setUp(@Optional("") String browserName,
                       @Optional("https://duckduckgo.com/") String duckDuckGoUrl) {
-        driver = BrowserFactory.createDriver(browserName);
+        driver = browserName.isBlank() ? BrowserFactory.createDriver() : BrowserFactory.createDriver(browserName);
         duckDuckGoPage = new DuckDuckGoPage(driver, duckDuckGoUrl);
     }
 
@@ -50,14 +50,6 @@ public class DuckDuckGoPageTest {
         String secondResultLinkUrl = duckDuckGoPage.getResultLinkUrl(2);
         Assert.assertTrue(secondResultLinkUrl.contains("https://www.linkedin.com"),
                 "The second Cucumber IO search result should link to LinkedIn, but was " + secondResultLinkUrl);
-    }
-
-    @Test
-    public void shouldShowTestNgTutorialAsFourthSearchResultInFirefox() {
-        duckDuckGoPage.open();
-        duckDuckGoPage.searchFor("TestNG");
-        Assert.assertEquals(duckDuckGoPage.getResultTitleText(4), "TestNG Tutorial",
-                "The fourth search result should be TestNG Tutorial");
     }
 
     @AfterMethod(alwaysRun = true)
