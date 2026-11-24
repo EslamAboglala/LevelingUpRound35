@@ -3,7 +3,14 @@
     <test name="ChromeTests">
         <parameter name="browser" value="chrome"/>
         <parameter name="duckDuckGoUrl" value="https://duckduckgo.com/"/>
+        <parameter name="checkboxesUrl" value="http://the-internet.herokuapp.com/checkboxes"/>
+        <parameter name="w3SchoolsHtmlTableUrl" value="https://www.w3schools.com/html/html_tables.asp"/>
+        <parameter name="fileUploadUrl" value="http://the-internet.herokuapp.com/upload"/>
+        <parameter name="uploadImageResourcePath" value="images/upload-test.png"/>
         <classes>
+            <class name="mohabTasks.FileUploadTest"/>
+            <class name="mohabTasks.CheckboxesTest"/>
+            <class name="mohabTasks.W3SchoolsHtmlTableTest"/>
             <class name="mohabTasks.DuckDuckGoPageTest">
                 <methods>
                     <include name="shouldAssertGooglePageTitle"/>
