@@ -1,4 +1,4 @@
-package mohabTasks;
+package mohabtasks;
 
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import mohabTasks.drivers.BrowserFactory;
-import mohabTasks.pages.FileUploadPage;
+import mohabtasks.drivers.BrowserFactory;
+import mohabtasks.pages.FileUploadPage;
 
 public class FileUploadTest {
     private WebDriver driver;

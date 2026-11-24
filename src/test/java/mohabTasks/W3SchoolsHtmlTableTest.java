@@ -1,4 +1,4 @@
-package mohabTasks;
+package mohabtasks;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -7,8 +7,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import mohabTasks.drivers.BrowserFactory;
-import mohabTasks.pages.W3SchoolsHtmlTablePage;
+import mohabtasks.drivers.BrowserFactory;
+import mohabtasks.pages.W3SchoolsHtmlTablePage;
 
 public class W3SchoolsHtmlTableTest {
     private WebDriver driver;
