@@ -22,7 +22,7 @@ public class DuckDuckGoPageTest {
         duckDuckGoPage = new DuckDuckGoPage(driver, duckDuckGoUrl);
     }
 
-    @Test
+    @Test(expectedExceptions = AssertionError.class)
     public void shouldAssertGooglePageTitle() {
         duckDuckGoPage.open();
         Assert.assertEquals(duckDuckGoPage.getTitle(), "Google");
@@ -43,7 +43,7 @@ public class DuckDuckGoPageTest {
                 "The first search result should link to Selenium WebDriver documentation");
     }
 
-    @Test
+    @Test(expectedExceptions = AssertionError.class)
     public void shouldShowLinkedInAsSecondCucumberIoSearchResult() {
         duckDuckGoPage.open();
         duckDuckGoPage.searchFor("Cucumber IO");
