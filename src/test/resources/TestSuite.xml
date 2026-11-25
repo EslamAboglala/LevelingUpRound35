@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="LevelingUpRound35">
-    <test name="BrowserTests">
+    <test name="ConfiguredBrowserTests">
         <parameter name="duckDuckGoUrl" value="https://duckduckgo.com/"/>
         <parameter name="checkboxesUrl" value="http://the-internet.herokuapp.com/checkboxes"/>
         <parameter name="w3SchoolsHtmlTableUrl" value="https://www.w3schools.com/html/html_tables.asp"/>
@@ -12,14 +12,7 @@
             <class name="mohabtasks.FileUploadTest"/>
             <class name="mohabtasks.CheckboxesTest"/>
             <class name="mohabtasks.W3SchoolsHtmlTableTest"/>
-            <class name="mohabtasks.DuckDuckGoPageTest">
-                <methods>
-                    <include name="shouldAssertGooglePageTitle"/>
-                    <include name="shouldDisplayDuckDuckGoLogo"/>
-                    <include name="shouldShowSeleniumWebDriverDocumentationAsFirstSearchResult"/>
-                    <include name="shouldShowLinkedInAsSecondCucumberIoSearchResult"/>
-                </methods>
-            </class>
+            <class name="mohabtasks.DuckDuckGoPageTest"/>
             <class name="mohabtasks.drivers.BrowserFactoryTest"/>
         </classes>
     </test>
@@ -27,11 +20,7 @@
         <parameter name="browser" value="firefox"/>
         <parameter name="duckDuckGoUrl" value="https://duckduckgo.com/"/>
         <classes>
-            <class name="mohabtasks.DuckDuckGoFirefoxTest">
-                <methods>
-                    <include name="shouldShowTestNgTutorialAsFourthSearchResult"/>
-                </methods>
-            </class>
+            <class name="mohabtasks.DuckDuckGoFirefoxTest"/>
         </classes>
     </test>
 </suite>
