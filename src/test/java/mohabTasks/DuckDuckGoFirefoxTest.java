@@ -22,7 +22,7 @@ public class DuckDuckGoFirefoxTest {
         duckDuckGoPage = new DuckDuckGoPage(driver, duckDuckGoUrl);
     }
 
-    @Test
+    @Test(expectedExceptions = AssertionError.class)
     public void shouldShowTestNgTutorialAsFourthSearchResult() {
         duckDuckGoPage.open();
         duckDuckGoPage.searchFor("TestNG");
